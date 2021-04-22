@@ -12,11 +12,15 @@ Person::Person(std::string name, std::string phone_number) {
 
 /// The name of the person
 /// \returns the name of the person
-std::string Person::name() const { return name_; }
+std::string Person::name() const { 
+  return name_; 
+}
 
 /// The phone_number of the person
 /// \returns the phone_number of the person
-std::string Person::phone_number() const { return phone_number_; }
+std::string Person::phone_number() const {
+  return phone_number_;
+}
 
 /// Change the person's current phone_number to some other number
 /// \param phone_number The person's new phone number
@@ -35,6 +39,7 @@ Person& Person::set_phone_number(const std::string& phone_number) {
 /// within that function.
 std::ostream& Person::write(std::ostream& out) const {
   // TODO: using out, print name_ and phone_number_
+  out << name_ << " " << phone_number_;
   return out;
 }
 
@@ -59,6 +64,7 @@ bool Person::operator!=(const Person& person) const {
 /// \returns true when *this.name() < person.name()
 bool Person::operator<(const Person& person) const {
   // TODO: Implement less than comparison
+  return name_ < person.name();
 }
 
 /// Boolean greater-than operator overload
@@ -66,6 +72,7 @@ bool Person::operator<(const Person& person) const {
 /// \returns true when *this.name() > person.name()
 bool Person::operator>(const Person& person) const {
   // TODO: Implement greater than comparison
+  return name_ > person.name();
 }
 
 /// Convert a person object into a string so it can be printed.

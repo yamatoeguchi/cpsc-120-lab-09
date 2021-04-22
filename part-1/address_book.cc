@@ -1,6 +1,7 @@
 #include <algorithm>
 #include <iostream>
 #include <string>
+#include <vector>
 
 #include "person.h"
 
@@ -26,37 +27,52 @@ int main(int argc, char* argv[]) {
   /// Number of enteries in the address book.
   const int kEnteries = 3;
   /// The address book is C++ Vector object that contains Person objects.
-  // TODO: declare a variable named address_book which is a vector of
+  // declare a variable named address_book which is a vector of
   // Person objects.
+  vector<Person> address_book;
 
   cout << "Let's add " << kEnteries << " to your address book!\n";
   for (int i = 0; i < kEnteries; i++) {
-    // TODO: Print out a prompt for the computer user to enter a person's name
-    // TODO: Declare a string variable named `name` to store the person's name.
-    // TODO: Using getline(), read from cin and store into `name`; read up to
+    // Print out a prompt for the computer user to enter a person's name
+    cout << "Please enter a full name: ";
+    // Declare a string variable named `name` to store the person's name.
+    string name;
+    // Using getline(), read from cin and store into `name`; read up to
     // '\n'.
+    getline(cin, name, '\n');
 
-    // TODO: Print out a prompt for the computer user to enter a
+    // Print out a prompt for the computer user to enter a
     // person's phone number.
-    // TODO: Declare a string variable named `phone_number` to store
+    cout << "Please enter a phone number: ";
+    // Declare a string variable named `phone_number` to store
     // the person's phone number.
-    // TODO: Using getline(), read from cin and store into `phone_number`;
+    string phone_number;
+    // Using getline(), read from cin and store into `phone_number`;
     // read up to '\n'.
+    getline(cin, phone_number, '\n');
 
-    // TODO: Declare a variable named `p` which is of type Person. Intialize
+    // Declare a variable named `p` which is of type Person. Intialize
     // it with the name and phone number that was read in from cin.
-    // TODO: Use the push_back() method to insert into the vector the person
+    Person p(name, phone_number);
+  
+    // Use the push_back() method to insert into the vector the person
     // that was just created.
     // https://en.cppreference.com/w/cpp/container/vector/push_back
+    address_book.push_back(p);
   }
   cout << "Let's sort your addressbook!\n";
-  // TODO: Sort the address_book vector using sort().
+  // Sort the address_book vector using sort().
   // https://en.cppreference.com/w/cpp/algorithm/sort
+  sort(address_book.begin(), address_book.end());
 
   cout << "Great! Let's print out all the enteries in your addressbook.\n";
-  // TODO: Using a range-for loop, print out each entry of the addressbook.
+
+  // Using a range-for loop, print out each entry of the addressbook.
   // Remember to use the overloaded << operator to output the person to
   // cout.
+  for(const auto& person : address_book) {
+    cout << person << "\n";
+  }
 
   return 0;
 }
