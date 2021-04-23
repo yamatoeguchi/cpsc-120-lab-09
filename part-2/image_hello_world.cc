@@ -30,6 +30,11 @@ int main(int argc, char* argv[]) {
     ErrorMessage("Please provide a path to a file.");
     exit(1);
   }
+
+  // This declares a string variable that takes the first argument as its value.
+  // the value is the output file name. this file is created if it 
+  // does not exist in the directory. if it is, it overwrites the file so
+  // be careful.
   string argv_one_output_file_name = string(argv[1]);
 
   // If you wish to change the size of the image, stick to square
@@ -56,12 +61,16 @@ int main(int argc, char* argv[]) {
     exit(1);
   }
 
-  // TODO: Write an outer for loop for every column starting
+  // TODO: Write an outer for loop for every row starting
   // at (image.height() - 1) and continuing while column is greater than
   // or equal to 0. Count down from (image.height() - 1) towards 0.
+  for (int row = image.height() - 1; row >= 0; row--) {
+
     // TODO: Write an inner for loop for every row starting at 0 and
     // continuing while row is less than the image.width(). Count up
     // from 0 towards image.width().
+    for (int column = 0; column < image.width(); column++) {
+
       // TODO: Body of the for loop...
       // First we will assign a red channel, then a green, and then a blue. The 
       // red and green channels will vary across the image while the blue channel
@@ -73,12 +82,20 @@ int main(int argc, char* argv[]) {
       // https://en.cppreference.com/w/cpp/numeric/math/round.
       // Let's develop a plan for what to do in this loop...
       // 1. declare & assign double red and asssign it row / image.width() - 1
+      double red = double(column) / double(image.height() - 1);
       // 2. declare & assign double green and assign it column / image.height - 1
+      double green = double(row) / double(image.width() - 1);
       // 3. declare & assign double blue the value 0.25.
+      double blue = 0.25;
       // 4. declare & assign int i_red to lround(255.0 * red)
+      int i_red = lround(225.0 * red);
       // 5. declare & assign int i_green to lround(255.0 * green)
+      int i_green = lround(255.0 * green);
       // 6. declare & assign int i_blue to lround(255.0 * blue)
       // 7. Use image.write() to write the color into the image file.
+      image.write(i_red, i_green, blue);
+    }
+  }
 
   image.close();
 

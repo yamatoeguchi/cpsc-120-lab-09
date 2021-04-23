@@ -18,7 +18,7 @@ Image::Image(const std::string& file_name, int width, int height) {
     output_stream_ << "# color, then RGB triples.\n";
     output_stream_ << width_ << " " << height_ << "\n255\n";
   }
-}
+};
 
 /// Check to see if the file is open and ready for pixel data.
 /// \returns bool if the file stream is open else false
