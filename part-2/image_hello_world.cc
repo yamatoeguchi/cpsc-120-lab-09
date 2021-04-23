@@ -61,17 +61,17 @@ int main(int argc, char* argv[]) {
     exit(1);
   }
 
-  // TODO: Write an outer for loop for every row starting
+  // Write an outer for loop for every row starting
   // at (image.height() - 1) and continuing while column is greater than
   // or equal to 0. Count down from (image.height() - 1) towards 0.
   for (int row = image.height() - 1; row >= 0; row--) {
 
-    // TODO: Write an inner for loop for every row starting at 0 and
+    // Write an inner for loop for every row starting at 0 and
     // continuing while row is less than the image.width(). Count up
     // from 0 towards image.width().
     for (int column = 0; column < image.width(); column++) {
 
-      // TODO: Body of the for loop...
+      // Body of the for loop...
       // First we will assign a red channel, then a green, and then a blue. The 
       // red and green channels will vary across the image while the blue channel
       // stays the same through out. Initially the values are assigned floating
