@@ -4,21 +4,21 @@
 /// Return the value of x
 /// \returns the value of x_
 double Vec3::x() const {
-  // TODO: Implement x()
+  // Implement x()
   return x_;
 }
 
 /// Return the value of y
 /// \returns the value of y_
 double Vec3::y() const {
-  // TODO: Implement y()
+  // Implement y()
   return y_;
 }
 
 /// Return the value of z
 /// \returns the value of z_
 double Vec3::z() const {
-  // TODO: Implement z()
+  // Implement z()
   return z_;
 }
 
@@ -28,7 +28,7 @@ double Vec3::z() const {
 /// \param person A Vec3 object
 std::ostream& operator<<(std::ostream& out, const Vec3& v) {
   out << "(" << v.x() << ", " << v.y() << ", " << v.z() << ")";
-  // TODO: Implement <<
+  // Implement <<
   return out;
 }
 
@@ -37,7 +37,7 @@ std::ostream& operator<<(std::ostream& out, const Vec3& v) {
 /// \param v The right hand operand of the operator
 /// \returns The sum of \p u and \p v as a new Vec3.
 Vec3 operator+(const Vec3& u, const Vec3& v) {
-  // TODO: Implement +
+  // Implement +
   return Vec3(
               u.x() + v.x(),
               u.y() + v.y(),
@@ -50,7 +50,7 @@ Vec3 operator+(const Vec3& u, const Vec3& v) {
 /// \param v The right hand operand of the operator
 /// \returns The difference of \p u and \p v as a new Vec3.
 Vec3 operator-(const Vec3& u, const Vec3& v) {
-  // TODO: Implement -
+  // Implement -
   return Vec3(
               u.x() - v.x(),
               u.y() - v.y(),
@@ -67,7 +67,7 @@ Vec3 operator-(const Vec3& u, const Vec3& v) {
 // double t = 3.0;
 // Vec3 c = t * a;
 Vec3 operator*(double t, const Vec3& v) {
-  // TODO: Implement *
+  // Implement *
   return Vec3(v.x() * t, v.y() * t, v.z() * t);
 }
 
@@ -77,7 +77,7 @@ Vec3 operator*(double t, const Vec3& v) {
 /// \param t The right hand operand of the operator
 /// \returns The product of \p t and \p v as a new Vec3.
 Vec3 operator*(const Vec3& v, double t) {
-  // TODO: Implement *
+  // Implement *
   return t * v;
 }
 
@@ -87,7 +87,7 @@ Vec3 operator*(const Vec3& v, double t) {
 /// \param t The right hand operand of the operator
 /// \returns The product of \p t and \p v as a new Vec3.
 Vec3 operator/(const Vec3& v, double t) {
-  // TODO: Implement *
+  // Implement *
   return (1.0 / t) * v;
 }
 
@@ -99,7 +99,7 @@ Vec3 operator/(const Vec3& v, double t) {
 /// \param v The right hand operand of the operator
 /// \returns The dot product between u and v.
 double dot(const Vec3& u, const Vec3& v) {
-  // TODO: Implement dot
+  // Implement dot
   return u.x() * v.x() + u.y() * v.y() + u.z() * v.z();
 }
 
