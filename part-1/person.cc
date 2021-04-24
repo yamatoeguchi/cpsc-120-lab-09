@@ -38,7 +38,7 @@ Person& Person::set_phone_number(const std::string& phone_number) {
 /// \remark Look at operator<< at the bottom - this method is called from
 /// within that function.
 std::ostream& Person::write(std::ostream& out) const {
-  // TODO: using out, print name_ and phone_number_
+  // using out, print name_ and phone_number_
   out << name_ << " " << phone_number_;
   return out;
 }
@@ -63,7 +63,7 @@ bool Person::operator!=(const Person& person) const {
 /// \param person The operand to the right hand side of <
 /// \returns true when *this.name() < person.name()
 bool Person::operator<(const Person& person) const {
-  // TODO: Implement less than comparison
+  // Implement less than comparison
   return name_ < person.name();
 }
 
@@ -71,7 +71,7 @@ bool Person::operator<(const Person& person) const {
 /// \param person The operand to the right hand side of >
 /// \returns true when *this.name() > person.name()
 bool Person::operator>(const Person& person) const {
-  // TODO: Implement greater than comparison
+  // Implement greater than comparison
   return name_ > person.name();
 }
 
