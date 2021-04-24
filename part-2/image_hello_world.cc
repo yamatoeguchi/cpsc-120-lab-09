@@ -1,3 +1,13 @@
+// Yamato Eguchi
+// CPSC-120-01
+// 2021-04-23
+// yamatoe1227@csu.fullerton.edu
+// @yamatoeguchi
+//
+// Lab 09-02
+//
+// "This is my image_hello_world.cc assignment"
+//
 
 #include <cmath>
 #include <iostream>
