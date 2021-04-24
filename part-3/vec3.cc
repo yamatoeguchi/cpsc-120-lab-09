@@ -1,3 +1,13 @@
+// Yamato Eguchi
+// CPSC-120-01
+// 2021-04-23
+// yamatoe1227@csu.fullerton.edu
+// @yamatoeguchi
+//
+// Lab 09-03
+//
+// "This is my vec3.cc assignment"
+//
 
 #include "vec3.h"
 
