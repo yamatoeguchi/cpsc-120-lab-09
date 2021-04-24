@@ -1,3 +1,14 @@
+// Yamato Eguchi
+// CPSC-120-01
+// 2021-04-23
+// yamatoe1227@csu.fullerton.edu
+// @yamatoeguchi
+//
+// Lab 09-01
+//
+// "This is my person.h assignment"
+//
+
 /// A [header guard]
 /// (https://google.github.io/styleguide/cppguide.html#The__define_Guard)
 /// is used at the beginning of every header file. A

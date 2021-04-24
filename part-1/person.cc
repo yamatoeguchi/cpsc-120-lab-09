@@ -1,3 +1,14 @@
+// Yamato Eguchi
+// CPSC-120-01
+// 2021-04-23
+// yamatoe1227@csu.fullerton.edu
+// @yamatoeguchi
+//
+// Lab 09-01
+//
+// "This is my person.cc assignment"
+//
+
 #include "person.h"
 
 /// Person is a constructor which initializes a Person object
