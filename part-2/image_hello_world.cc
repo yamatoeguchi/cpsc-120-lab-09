@@ -82,8 +82,10 @@ int main(int argc, char* argv[]) {
       // https://en.cppreference.com/w/cpp/numeric/math/round.
       // Let's develop a plan for what to do in this loop...
       // 1. declare & assign double red and asssign it row / image.width() - 1
+      // double red = 0;
       double red = double(column) / double(image.height() - 1);
       // 2. declare & assign double green and assign it column / image.height - 1
+      // double green = 0;
       double green = double(row) / double(image.width() - 1);
       // 3. declare & assign double blue the value 0.25.
       double blue = 0.25;
@@ -92,8 +94,9 @@ int main(int argc, char* argv[]) {
       // 5. declare & assign int i_green to lround(255.0 * green)
       int i_green = lround(255.0 * green);
       // 6. declare & assign int i_blue to lround(255.0 * blue)
+      int i_blue = lround(255 * blue);
       // 7. Use image.write() to write the color into the image file.
-      image.write(i_red, i_green, blue);
+      image.write(i_red, i_green, i_blue);
     }
   }
 
